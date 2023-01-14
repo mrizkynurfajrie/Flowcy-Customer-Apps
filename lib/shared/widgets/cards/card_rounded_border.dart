@@ -45,7 +45,7 @@ class CardRoundedBorder extends StatelessWidget {
                 : Corners.lgBorder,
             border: Border.all(
                 width: borderWidth ?? Strokes.thin,
-                color: borderColor ?? AppColor.bodyColor.shade300)),
+                color: borderColor ?? AppColor.neutral.shade300)),
         child: child);
   }
 }

@@ -87,15 +87,15 @@ class _InputSelectionState extends State<InputSelection> {
                     ? widget.isValid
                         ? Border.all(
                             width: Strokes.xthin,
-                            color: AppColor.bodyColor.shade100,
+                            color: AppColor.neutral.shade100,
                           )
                         : Border.all(
                             width: Strokes.thin,
-                            color: AppColor.errorColor,
+                            color: AppColor.error,
                           )
                     : Border.all(
                         width: Strokes.xthin,
-                        color: AppColor.bodyColor.shade100,
+                        color: AppColor.neutral.shade100,
                       ),
               ),
               child: Row(
@@ -114,7 +114,7 @@ class _InputSelectionState extends State<InputSelection> {
                       style: widget.valueText != widget.hintText
                           ? widget.hintStyles
                           : TextStyles.inter.copyWith(
-                              color: AppColor.bodyColor.shade600,
+                              color: AppColor.neutral.shade600,
                               fontSize: FontSizes.s12),
                     ),
                   ),
@@ -123,7 +123,7 @@ class _InputSelectionState extends State<InputSelection> {
                       Icon(
                         Icons.keyboard_arrow_down,
                         size: IconSizes.med,
-                        color: AppColor.bodyColor.shade600,
+                        color: AppColor.neutral.shade600,
                       ),
                 ],
               ),

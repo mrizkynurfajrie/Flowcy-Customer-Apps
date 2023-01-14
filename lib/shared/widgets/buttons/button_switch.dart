@@ -33,7 +33,7 @@ class _ButtonSwitchState extends State<ButtonSwitch> {
     return Transform.scale(
       scale: widget.size!,
       child: CupertinoSwitch(
-          activeColor: widget.trackColor ?? AppColor.successColor,
+          activeColor: widget.trackColor ?? AppColor.success,
           value: widget.value,
           onChanged: widget.onChange),
     );

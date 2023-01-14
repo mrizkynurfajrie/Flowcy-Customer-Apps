@@ -49,7 +49,7 @@ class PageApiLog extends GetView<ControllerApiLog> {
                                           e.error.isEmpty
                                               ? Icon(
                                                   Icons.check_circle_outline,
-                                                  color: AppColor.successColor,
+                                                  color: AppColor.success,
                                                   size: IconSizes.sm,
                                                 )
                                               : Icon(

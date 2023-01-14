@@ -50,7 +50,7 @@ class _CheckboxLabelState extends State<CheckboxLabel> {
                     border: Border.all(
                         width: 2,
                         color:
-                            widget.colorBorder ?? AppColor.bodyColor.shade700),
+                            widget.colorBorder ?? AppColor.neutral.shade700),
                     color: Theme.of(context).scaffoldBackgroundColor),
             child: _isFavorit
                 ? const Icon(

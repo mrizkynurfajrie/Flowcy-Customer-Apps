@@ -27,8 +27,8 @@ class CardBottomsheet extends StatelessWidget {
               child: SizedBox(
                 height: Strokes.thick,
                 child: CardRoundedBorder(
-                  color: AppColor.bodyColor.shade200,
-                  borderColor: AppColor.bodyColor.shade200,
+                  color: AppColor.neutral.shade200,
+                  borderColor: AppColor.neutral.shade200,
                   padding: EdgeInsets.all(Insets.xs),
                   shadow: Shadows.none,
                   child: Container(),

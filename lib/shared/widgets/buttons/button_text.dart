@@ -28,7 +28,7 @@ class ButtonText extends StatelessWidget {
       onPressed: onPressed,
       style: TextButton.styleFrom(
         tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-        backgroundColor: color ?? AppColor.secondColor.shade500,
+        backgroundColor: color ?? AppColor.neutral,
         minimumSize: const Size(50, 30),
         padding: EdgeInsets.symmetric(vertical: 2.h),
         alignment: Alignment.center,

@@ -63,14 +63,14 @@ class ButtonCustomOutline extends StatelessWidget {
             style: ElevatedButton.styleFrom(
               padding: EdgeInsets.zero,
               elevation: elevation ?? 1,
-              primary: color ?? AppColor.bodyColor.shade50,
+              backgroundColor: color ?? AppColor.whiteColor,
               shape: RoundedRectangleBorder(
                 borderRadius:
                     BorderRadius.all(Radius.circular(borderRadius ?? 0)),
                 side: BorderSide(
                     color: enable
                         ? outlineColor ?? Theme.of(context).primaryColor
-                        : AppColor.bodyColor.shade300,
+                        : AppColor.neutral.shade300,
                     width: Strokes.thin),
               ),
             ),

@@ -8,7 +8,7 @@ class BorderStyles {
 
   static OutlineInputBorder enableTextField = OutlineInputBorder(
     borderSide:
-        BorderSide(color: AppColor.bodyColor.shade300, width: Strokes.xthin),
+        BorderSide(color: AppColor.neutral.shade300, width: Strokes.xthin),
     borderRadius: Corners.lgBorder,
   );
 
@@ -20,7 +20,7 @@ class BorderStyles {
 
   static OutlineInputBorder disableTextField = OutlineInputBorder(
     borderSide:
-        BorderSide(color: AppColor.bodyColor.shade300, width: Strokes.xthin),
+        BorderSide(color: AppColor.neutral.shade300, width: Strokes.xthin),
     borderRadius: Corners.lgBorder,
   );
 
@@ -31,8 +31,7 @@ class BorderStyles {
   );
 
   static OutlineInputBorder errorTextField = OutlineInputBorder(
-    borderSide:
-        const BorderSide(color: AppColor.errorColor, width: Strokes.thin),
+    borderSide: const BorderSide(color: AppColor.error, width: Strokes.thin),
     borderRadius: Corners.lgBorder,
   );
 }
@@ -197,11 +196,11 @@ class Shadows {
             offset: const Offset(0, 4)),
       ];
   static List<BoxShadow> get none => [
-        BoxShadow(
-            color: AppColor.bodyColor.shade50,
+        const BoxShadow(
+            color: AppColor.whiteColor,
             spreadRadius: 0,
             blurRadius: 0,
-            offset: const Offset(0, 0)),
+            offset: Offset(0, 0)),
       ];
 
   static List<BoxShadow> get shadowsUp => [
@@ -405,12 +404,12 @@ class TextStyles {
 
 class Borders {
   static const BorderSide universalBorder = BorderSide(
-    color: AppColor.bodyColor,
+    color: AppColor.whiteColor,
     width: 1,
   );
 
   static const BorderSide smallBorder = BorderSide(
-    color: AppColor.bodyColor,
+    color: AppColor.whiteColor,
     width: 0.5,
   );
 
@@ -419,11 +418,11 @@ class Borders {
     double? strokeWidth,
   }) {
     return BoxDecoration(
-        color: AppColor.bodyColor.shade100,
+        color: AppColor.whiteColor,
         borderRadius: Corners.lgBorder,
         border: Border.all(
           width: strokeWidth ?? Strokes.xthin,
-          color: borderColor ?? AppColor.bodyColor.shade300,
+          color: borderColor ?? AppColor.whiteColor,
         ));
   }
 }
@@ -434,6 +433,6 @@ ThemeData appTheme(hexColor) {
     brightness: Brightness.light,
     primaryColor: MaterialColor(hexColor, AppColor.color),
     primarySwatch: MaterialColor(hexColor, AppColor.color),
-    fontFamily: 'DMSans',
+    fontFamily: 'Inter',
   );
 }

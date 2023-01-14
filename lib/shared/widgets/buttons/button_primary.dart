@@ -49,7 +49,7 @@ class ButtonPrimary extends StatelessWidget {
             style: ElevatedButton.styleFrom(
               backgroundColor: enable
                   ? color ?? Theme.of(context).primaryColor
-                  : AppColor.bodyColor.shade300,
+                  : AppColor.neutral.shade300,
               shape: RoundedRectangleBorder(
                   borderRadius: cornerRadius != null
                       ? BorderRadius.all(Radius.circular(cornerRadius!))
