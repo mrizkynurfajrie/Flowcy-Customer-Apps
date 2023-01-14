@@ -1,12 +1,12 @@
 import 'dart:developer';
-import 'package:firebase_core/firebase_core.dart';
-import 'package:firebase_messaging/firebase_messaging.dart';
+// import 'package:firebase_core/firebase_core.dart';
+// import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flowcy_customer/features/api_log/components/overlay_log_button.dart';
 import 'package:flowcy_customer/routes/app_pages.dart';
 import 'package:flowcy_customer/routes/app_routes.dart';
 import 'package:flowcy_customer/shared/constans/colors.dart';
 import 'package:flowcy_customer/shared/controllers/controller_bind.dart';
-import 'package:flowcy_customer/shared/helpers/local_notification_service.dart';
+// import 'package:flowcy_customer/shared/helpers/local_notification_service.dart';
 import 'package:flowcy_customer/shared/helpers/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -18,18 +18,18 @@ import 'shared/widgets/others/page_info.dart';
 Future<void> main() async {
   await GetStorage.init();
   WidgetsFlutterBinding.ensureInitialized();
-  LocalNotificationService.initialize();
-  await Firebase.initializeApp();
-  FirebaseMessaging.onBackgroundMessage(backgroundHandler);
+  // LocalNotificationService.initialize();
+  // await Firebase.initializeApp();
+  // FirebaseMessaging.onBackgroundMessage(backgroundHandler);
 
   runApp(const App());
 }
 
 // receive message when app in background
-Future<void> backgroundHandler(RemoteMessage message) async {
-  log(message.data.toString());
-  // log(message.notification?.title?.toString());
-}
+// Future<void> backgroundHandler(RemoteMessage message) async {
+//   log(message.data.toString());
+//   // log(message.notification?.title?.toString());
+// }
 
 class App extends StatelessWidget {
   const App({
@@ -103,7 +103,7 @@ class _AppViewState extends State<AppView> with WidgetsBindingObserver {
     ]);
 
     return ScreenUtilInit(
-      designSize: const Size(393, 830),
+      designSize: const Size(375, 830),
       builder: (_, __) => GetMaterialApp(
         navigatorKey: Get.key,
         title: 'Flowcy-Customer',
