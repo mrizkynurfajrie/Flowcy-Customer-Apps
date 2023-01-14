@@ -103,7 +103,7 @@ class _AppViewState extends State<AppView> with WidgetsBindingObserver {
     ]);
 
     return ScreenUtilInit(
-      designSize: const Size(375, 830),
+      designSize: const Size(375, 812),
       builder: (_, __) => GetMaterialApp(
         navigatorKey: Get.key,
         title: 'Flowcy-Customer',
