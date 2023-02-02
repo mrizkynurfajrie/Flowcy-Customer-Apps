@@ -1,4 +1,5 @@
 import 'package:flowcy_customer/shared/constans/colors.dart';
+import 'package:flowcy_customer/shared/helpers/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -173,6 +174,170 @@ class Strokes {
 }
 
 class Shadows {
+  // BOTTOM
+  static List<BoxShadow> get xsBottom => [
+        BoxShadow(
+          color: const Color(0xFF101828).withOpacity(0.05),
+          offset: const Offset(0, 1),
+          blurRadius: 2,
+        )
+      ];
+  static List<BoxShadow> get smBottom => [
+        BoxShadow(
+          color: const Color(0xFF101828).withOpacity(0.1),
+          offset: const Offset(0, 1),
+          blurRadius: 3,
+        ),
+        BoxShadow(
+          color: const Color(0xFF101828).withOpacity(0.06),
+          offset: const Offset(0, 1),
+          blurRadius: 2,
+        ),
+      ];
+  static List<BoxShadow> get mdBottom => [
+        BoxShadow(
+          color: const Color(0xFF101828).withOpacity(0.1),
+          offset: const Offset(0, 4),
+          blurRadius: 8,
+          spreadRadius: -2,
+        ),
+        BoxShadow(
+          color: const Color(0xFF101828).withOpacity(0.06),
+          offset: const Offset(0, 2),
+          blurRadius: 4,
+          spreadRadius: -2,
+        ),
+      ];
+  static List<BoxShadow> get lgBottom => [
+        BoxShadow(
+          color: const Color(0xFF101828).withOpacity(0.08),
+          offset: const Offset(0, 12),
+          blurRadius: 16,
+          spreadRadius: -4,
+        ),
+        BoxShadow(
+          color: const Color(0xFF101828).withOpacity(0.03),
+          offset: const Offset(0, 4),
+          blurRadius: 6,
+          spreadRadius: -2,
+        ),
+      ];
+  static List<BoxShadow> get xlBottom => [
+        BoxShadow(
+          color: const Color(0xFF101828).withOpacity(0.08),
+          offset: const Offset(0, 20),
+          blurRadius: 24,
+          spreadRadius: -4,
+        ),
+        BoxShadow(
+          color: const Color(0xFF101828).withOpacity(0.03),
+          offset: const Offset(0, 8),
+          blurRadius: 8,
+          spreadRadius: -4,
+        ),
+      ];
+  static List<BoxShadow> get xl2Bottom => [
+        BoxShadow(
+          color: const Color(0xFF101828).withOpacity(0.18),
+          offset: const Offset(0, 24),
+          blurRadius: 28,
+          spreadRadius: -12,
+        ),
+      ];
+  static List<BoxShadow> get xl3Bottom => [
+        BoxShadow(
+          color: const Color(0xFF101828).withOpacity(0.14),
+          offset: const Offset(0, 32),
+          blurRadius: 64,
+          spreadRadius: -12,
+        ),
+      ];
+  // TOP
+  static List<BoxShadow> get xsTop => [
+        BoxShadow(
+          color: const Color(0xFF101828).withOpacity(0.05),
+          offset: const Offset(0, -1),
+          blurRadius: 2,
+        )
+      ];
+  static List<BoxShadow> get smTop => [
+        BoxShadow(
+          color: const Color(0xFF101828).withOpacity(0.1),
+          offset: const Offset(0, -1),
+          blurRadius: 3,
+        ),
+        BoxShadow(
+          color: const Color(0xFF101828).withOpacity(0.06),
+          offset: const Offset(0, 1),
+          blurRadius: 2,
+        ),
+      ];
+  static List<BoxShadow> get mdTop => [
+        BoxShadow(
+          color: const Color(0xFF101828).withOpacity(0.1),
+          offset: const Offset(0, 4),
+          blurRadius: 8,
+          spreadRadius: -2,
+        ),
+        BoxShadow(
+          color: const Color(0xFF101828).withOpacity(0.06),
+          offset: const Offset(0, -2),
+          blurRadius: 4,
+          spreadRadius: -2,
+        ),
+      ];
+  static List<BoxShadow> get lgTop => [
+        BoxShadow(
+          color: const Color(0xFF101828).withOpacity(0.08),
+          offset: const Offset(0, -12),
+          blurRadius: 16,
+          spreadRadius: -4,
+        ),
+        BoxShadow(
+          color: const Color(0xFF101828).withOpacity(0.03),
+          offset: const Offset(0, -4),
+          blurRadius: 6,
+          spreadRadius: -2,
+        ),
+      ];
+  static List<BoxShadow> get xlTop => [
+        BoxShadow(
+          color: const Color(0xFF101828).withOpacity(0.08),
+          offset: const Offset(0, -20),
+          blurRadius: 24,
+          spreadRadius: -4,
+        ),
+        BoxShadow(
+          color: const Color(0xFF101828).withOpacity(0.03),
+          offset: const Offset(0, -8),
+          blurRadius: 8,
+          spreadRadius: -4,
+        ),
+      ];
+  static List<BoxShadow> get xl2Top => [
+        BoxShadow(
+          color: const Color(0xFF101828).withOpacity(0.18),
+          offset: const Offset(0, -24),
+          blurRadius: 28,
+          spreadRadius: -12,
+        ),
+      ];
+  static List<BoxShadow> get xl3Top => [
+        BoxShadow(
+          color: const Color(0xFF101828).withOpacity(0.14),
+          offset: const Offset(0, -32),
+          blurRadius: 64,
+          spreadRadius: -12,
+        ),
+      ];
+  static List<BoxShadow> get none => [
+        const BoxShadow(
+            color: AppColor.whiteColor,
+            spreadRadius: 0,
+            blurRadius: 0,
+            offset: Offset(0, 0)),
+      ];
+
   static List<BoxShadow> get universal => [
         BoxShadow(
             color: const Color(0xff333333).withOpacity(.13),
@@ -195,21 +360,6 @@ class Shadows {
             blurRadius: 8,
             offset: const Offset(0, 4)),
       ];
-  static List<BoxShadow> get none => [
-        const BoxShadow(
-            color: AppColor.whiteColor,
-            spreadRadius: 0,
-            blurRadius: 0,
-            offset: Offset(0, 0)),
-      ];
-
-  static List<BoxShadow> get shadowsUp => [
-        BoxShadow(
-            color: const Color(0xff333333).withOpacity(.15),
-            spreadRadius: 1,
-            blurRadius: 3,
-            offset: const Offset(-1, 0)),
-      ];
 }
 
 /// Font Sizes
@@ -221,19 +371,21 @@ class FontSizes {
   static double get s10 => 10.w;
   static double get s11 => 11.w;
   static double get s12 => 12.w;
-  static double get s13 => 13.w;
   static double get s14 => 14.w;
   static double get s16 => 16.w;
   static double get s18 => 18.w;
   static double get s20 => 20.w;
   static double get s24 => 24.w;
-  static double get s28 => 28.w;
   static double get s26 => 26.w;
+  static double get s28 => 28.w;
+  static double get s30 => 30.w;
   static double get s32 => 32.w;
   static double get s36 => 36.w;
   static double get s40 => 40.w;
   static double get s48 => 48.w;
   static double get s56 => 56.w;
+  static double get s60 => 60.w;
+  static double get s72 => 72.w;
 }
 
 /// Fonts - A list of Font Families, this is uses by the TextStyles class to create concrete styles.
@@ -245,81 +397,7 @@ class FontSizes {
 class TextStyles {
   /// Declare a base style for each Family
   static const TextStyle inter =
-      TextStyle(fontWeight: FontWeight.w400, fontFamily: 'Poppins');
-
-  static TextStyle get textAppBar => inter.copyWith(
-        fontSize: FontSizes.s16,
-        color: AppColor.whiteColor,
-        fontWeight: FontWeight.w500,
-      );
-
-  static TextStyle get bottomButton => inter.copyWith(
-        fontSize: FontSizes.s16,
-        color: AppColor.primaryColor,
-        fontWeight: FontWeight.w500,
-        letterSpacing: -0.9,
-      );
-
-  static TextStyle get textH1 => inter.copyWith(
-        fontSize: 22,
-        fontWeight: FontWeight.w500,
-      );
-  static TextStyle get textH2 => inter.copyWith(
-        fontSize: 20,
-        fontWeight: FontWeight.w500,
-      );
-
-  static TextStyle get textStd => inter.copyWith(
-        fontSize: 16,
-        fontWeight: FontWeight.w400,
-      );
-
-  static TextStyle get textcheckbox => inter.copyWith(
-        fontSize: 12,
-        fontWeight: FontWeight.w600,
-      );
-
-  static TextStyle get textStdBold => inter.copyWith(
-        fontSize: 18,
-        fontWeight: FontWeight.bold,
-      );
-
-  static TextStyle get textStatWhite => inter.copyWith(
-        fontSize: 12,
-        fontWeight: FontWeight.bold,
-        color: AppColor.whiteColor,
-      );
-
-  static TextStyle get textTitle => inter.copyWith(
-      fontSize: 15, color: AppColor.whiteColor, fontWeight: FontWeight.bold);
-
-  static TextStyle get textTable => inter.copyWith(
-        fontSize: 15,
-        fontWeight: FontWeight.w500,
-      );
-
-  static TextStyle get textTableOrange => inter.copyWith(
-        fontSize: 15,
-        color: AppColor.primaryColor,
-        fontWeight: FontWeight.w500,
-      );
-
-  static TextStyle get textTableOrangeBold => inter.copyWith(
-        fontSize: 17,
-        color: AppColor.primaryColor,
-        fontWeight: FontWeight.bold,
-      );
-
-  static TextStyle get textNom => inter.copyWith(
-        fontSize: 25,
-        fontWeight: FontWeight.bold,
-      );
-
-  static TextStyle get textPopUpOrange => inter.copyWith(
-        fontSize: 16,
-        color: AppColor.primaryColor,
-        fontWeight: FontWeight.w500,
-      );
+      TextStyle(fontWeight: FontWeight.w400, fontFamily: 'Inter');
 
   static TextStyle get h1 => inter.copyWith(
       fontWeight: FontWeight.w700,
@@ -336,6 +414,99 @@ class TextStyles {
   static TextStyle get h4 => h1.copyWith(fontSize: FontSizes.s26);
   static TextStyle get h5 => h1.copyWith(fontSize: FontSizes.s20);
   static TextStyle get h6 => h3.copyWith(fontSize: FontSizes.s18);
+
+  // Old style text
+  static TextStyle get text2xs => inter.copyWith(fontSize: FontSizes.s10);
+  static TextStyle get textBase => inter.copyWith(fontSize: FontSizes.s16);
+  static TextStyle get textBaseBold =>
+      textBase.copyWith(fontWeight: FontWeight.w700);
+  static TextStyle get text2Base => inter.copyWith(fontSize: FontSizes.s18);
+  static TextStyle get text2BaseBold =>
+      text2Base.copyWith(fontWeight: FontWeight.w700);
+  static TextStyle get text2xl => inter.copyWith(fontSize: FontSizes.s32);
+  static TextStyle get text2xlBold =>
+      text2xl.copyWith(fontWeight: FontWeight.w700);
+  static TextStyle get text3xl => inter.copyWith(fontSize: FontSizes.s40);
+  static TextStyle get text3xlBold =>
+      text3xl.copyWith(fontWeight: FontWeight.w700);
+  // End old style text
+
+  static TextStyle get textApiLog1 => inter.copyWith(
+      fontWeight: FontWeight.w600,
+      fontSize: FontSizes.s12,
+      height: 1.17,
+      letterSpacing: .5);
+  static TextStyle get textApiLog2 => textApiLog1.copyWith(
+      fontSize: FontSizes.s10, height: 1, letterSpacing: .25);
+  static TextStyle get textApiLog3 => textApiLog1.copyWith(
+      fontSize: FontSizes.s9, height: 1, letterSpacing: .25);
+
+  // Text
+  static TextStyle get textXxs => inter.copyWith(
+        fontSize: FontSizes.s10,
+        height: 16.0.toFigmaHeight(FontSizes.s10),
+      );
+  static TextStyle get textXxsMed =>
+      textXxs.copyWith(fontWeight: FontWeight.w500);
+  static TextStyle get textXxsSemiBold =>
+      textXxs.copyWith(fontWeight: FontWeight.w600);
+  static TextStyle get textXxsBold =>
+      textXxs.copyWith(fontWeight: FontWeight.w700);
+
+  static TextStyle get textXs => inter.copyWith(
+        fontSize: FontSizes.s12,
+        height: 18.0.toFigmaHeight(FontSizes.s12),
+      );
+  static TextStyle get textXsMed =>
+      textXs.copyWith(fontWeight: FontWeight.w500);
+  static TextStyle get textXsSemiBold =>
+      textXs.copyWith(fontWeight: FontWeight.w600);
+  static TextStyle get textXsBold =>
+      textXs.copyWith(fontWeight: FontWeight.w700);
+
+  static TextStyle get textSm => inter.copyWith(
+        fontSize: FontSizes.s14,
+        height: 20.0.toFigmaHeight(FontSizes.s14),
+      );
+  static TextStyle get textSmMed =>
+      textSm.copyWith(fontWeight: FontWeight.w500);
+  static TextStyle get textSmSemiBold =>
+      textSm.copyWith(fontWeight: FontWeight.w600);
+  static TextStyle get textSmBold =>
+      textSm.copyWith(fontWeight: FontWeight.w700);
+
+  static TextStyle get textMd => inter.copyWith(
+        fontSize: FontSizes.s16,
+        height: 24.0.toFigmaHeight(FontSizes.s16),
+      );
+  static TextStyle get textMdMed =>
+      textMd.copyWith(fontWeight: FontWeight.w500);
+  static TextStyle get textMdSemiBold =>
+      textMd.copyWith(fontWeight: FontWeight.w600);
+  static TextStyle get textMdBold =>
+      textMd.copyWith(fontWeight: FontWeight.w700);
+
+  static TextStyle get textLg => inter.copyWith(
+        fontSize: FontSizes.s18,
+        height: 28.0.toFigmaHeight(FontSizes.s18),
+      );
+  static TextStyle get textLgMed =>
+      textLg.copyWith(fontWeight: FontWeight.w500);
+  static TextStyle get textLgSemiBold =>
+      textLg.copyWith(fontWeight: FontWeight.w600);
+  static TextStyle get textLgBold =>
+      textLg.copyWith(fontWeight: FontWeight.w700);
+
+  static TextStyle get textXl => inter.copyWith(
+        fontSize: FontSizes.s20,
+        height: 30.0.toFigmaHeight(FontSizes.s20),
+      );
+  static TextStyle get textXlMed =>
+      textXl.copyWith(fontWeight: FontWeight.w500);
+  static TextStyle get textXlSemiBold =>
+      textXl.copyWith(fontWeight: FontWeight.w600);
+  static TextStyle get textXlBold =>
+      textXl.copyWith(fontWeight: FontWeight.w700);
   static TextStyle get subtitle1 => inter.copyWith(
       fontWeight: FontWeight.bold, fontSize: FontSizes.s16, height: 1.31);
   static TextStyle get subtitle2 => subtitle1.copyWith(
@@ -363,43 +534,83 @@ class TextStyles {
       fontSize: FontSizes.s12,
       height: 1.17,
       letterSpacing: .5);
-  static TextStyle get callout2 =>
-      callout1.copyWith(fontSize: FontSizes.s10, height: 1, letterSpacing: .25);
-  static TextStyle get callout3 =>
-      callout1.copyWith(fontSize: FontSizes.s9, height: 1, letterSpacing: .25);
-  static TextStyle get caption => inter.copyWith(
-      fontWeight: FontWeight.w500, fontSize: FontSizes.s11, height: 1.36);
   static TextStyle get button => inter.copyWith(
       fontWeight: FontWeight.bold, fontSize: FontSizes.s14, height: 1.71);
 
-  static TextStyle get saldo48 =>
-      inter.copyWith(fontWeight: FontWeight.w700, fontSize: FontSizes.s48);
-  static TextStyle get saldo36 => saldo48.copyWith(fontSize: FontSizes.s36);
-  static TextStyle get saldo24 => saldo48.copyWith(fontSize: FontSizes.s24);
-  static TextStyle get saldo18 => saldo48.copyWith(fontSize: FontSizes.s18);
-  static TextStyle get saldo14 => saldo48.copyWith(fontSize: FontSizes.s14);
-  static TextStyle get saldo12 => saldo48.copyWith(fontSize: FontSizes.s12);
+  // display
+  static TextStyle get displayXs => inter.copyWith(
+        fontSize: FontSizes.s24,
+        height: 32.0.toFigmaHeight(FontSizes.s24),
+      );
+  static TextStyle get displayXsMed =>
+      displayXs.copyWith(fontWeight: FontWeight.w500);
+  static TextStyle get displayXsSemiBold =>
+      displayXs.copyWith(fontWeight: FontWeight.w600);
+  static TextStyle get displayXsBold =>
+      displayXs.copyWith(fontWeight: FontWeight.w700);
 
-  static TextStyle get text3xl => inter.copyWith(fontSize: FontSizes.s40);
-  static TextStyle get text3xlBold =>
-      text3xl.copyWith(fontWeight: FontWeight.w700);
-  static TextStyle get text2xs => inter.copyWith(fontSize: FontSizes.s10);
-  static TextStyle get textXs => inter.copyWith(fontSize: FontSizes.s12);
-  static TextStyle get textXsBold =>
-      textXs.copyWith(fontWeight: FontWeight.w700);
-  static TextStyle get textSm => inter.copyWith(fontSize: FontSizes.s14);
-  static TextStyle get textBase => inter.copyWith(fontSize: FontSizes.s16);
-  static TextStyle get textBaseBold =>
-      textBase.copyWith(fontWeight: FontWeight.w700);
-  static TextStyle get textLg => inter.copyWith(fontSize: FontSizes.s20);
-  static TextStyle get textLgBold =>
-      textLg.copyWith(fontWeight: FontWeight.w700, height: 1.4);
-  static TextStyle get textXl => inter.copyWith(fontSize: FontSizes.s24);
-  static TextStyle get textXlBold =>
-      textXl.copyWith(fontWeight: FontWeight.w700, height: 1.25);
-  static TextStyle get text2xl => inter.copyWith(fontSize: FontSizes.s32);
-  static TextStyle get text2xlBold =>
-      text2xl.copyWith(fontWeight: FontWeight.w700);
+  static TextStyle get displaySm => inter.copyWith(
+        fontSize: FontSizes.s30,
+        height: 38.0.toFigmaHeight(FontSizes.s30),
+      );
+  static TextStyle get displaySmMed =>
+      displaySm.copyWith(fontWeight: FontWeight.w500);
+  static TextStyle get displaySmSemiBold =>
+      displaySm.copyWith(fontWeight: FontWeight.w600);
+  static TextStyle get displaySmBold =>
+      displaySm.copyWith(fontWeight: FontWeight.w700);
+
+  static TextStyle get displayMd => inter.copyWith(
+        fontSize: FontSizes.s36,
+        height: 44.0.toFigmaHeight(FontSizes.s36),
+        letterSpacing: -2,
+      );
+  static TextStyle get displayMdMed =>
+      displayMd.copyWith(fontWeight: FontWeight.w500);
+  static TextStyle get displayMdSemiBold =>
+      displayMd.copyWith(fontWeight: FontWeight.w600);
+  static TextStyle get displayMdBold =>
+      displayMd.copyWith(fontWeight: FontWeight.w700);
+
+  static TextStyle get displayLg => inter.copyWith(
+        fontSize: FontSizes.s48,
+        height: 72.0.toFigmaHeight(FontSizes.s48),
+        letterSpacing: -2,
+      );
+  static TextStyle get displayLgMed =>
+      displayLg.copyWith(fontWeight: FontWeight.w500);
+  static TextStyle get displayLgSemiBold =>
+      displayLg.copyWith(fontWeight: FontWeight.w600);
+  static TextStyle get displayLgBold =>
+      displayLg.copyWith(fontWeight: FontWeight.w700);
+
+  static TextStyle get displayXl => inter.copyWith(
+        fontSize: FontSizes.s60,
+        height: 72.0.toFigmaHeight(FontSizes.s60),
+        letterSpacing: -2,
+      );
+  static TextStyle get displayXlMed =>
+      displayXl.copyWith(fontWeight: FontWeight.w500);
+  static TextStyle get displayXlSemiBold =>
+      displayXl.copyWith(fontWeight: FontWeight.w600);
+  static TextStyle get displayXlBold =>
+      displayXl.copyWith(fontWeight: FontWeight.w700);
+
+  static TextStyle get displayXxl => inter.copyWith(
+        fontSize: FontSizes.s72,
+        height: 90.0.toFigmaHeight(FontSizes.s72),
+        letterSpacing: -2,
+      );
+  static TextStyle get displayXxlMed =>
+      displayXxl.copyWith(fontWeight: FontWeight.w500);
+  static TextStyle get displayXxlSemiBold =>
+      displayXxl.copyWith(fontWeight: FontWeight.w600);
+  static TextStyle get displayXxlBold =>
+      displayXxl.copyWith(fontWeight: FontWeight.w700);
+
+  static TextStyle get errorTextInput => textSm.copyWith(
+        color: AppColor.error.shade600,
+      );
 }
 
 class Borders {

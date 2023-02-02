@@ -24,7 +24,12 @@ class TextCopy extends StatelessWidget {
       },
       child: Text(
         text,
-        style: style ?? TextStyles.small1,
+        style: style ??
+            TextStyles.inter.copyWith(
+              fontSize: FontSizes.s12,
+              fontWeight: FontWeight.normal,
+              height: 1.15,
+            ),
       ),
     );
   }

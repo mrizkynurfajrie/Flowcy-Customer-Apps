@@ -62,7 +62,7 @@ class PageApiLog extends GetView<ControllerApiLog> {
                                       verticalSpace(Insets.xs),
                                       TextCopy(
                                         text: e.url,
-                                        style: TextStyles.callout2
+                                        style: TextStyles.textApiLog2
                                             .copyWith(color: Colors.blue),
                                       ),
                                     ],
@@ -92,7 +92,7 @@ class PageApiLog extends GetView<ControllerApiLog> {
                                               ),
                                               child: Text(
                                                 'PAYLOAD',
-                                                style: TextStyles.callout3
+                                                style: TextStyles.textApiLog3
                                                     .copyWith(
                                                   color: Colors.indigo.shade700,
                                                 ),
@@ -130,7 +130,7 @@ class PageApiLog extends GetView<ControllerApiLog> {
                                               ),
                                               child: Text(
                                                 'RESPONSE',
-                                                style: TextStyles.callout3
+                                                style: TextStyles.textApiLog3
                                                     .copyWith(
                                                   color: Colors.green.shade700,
                                                 ),
@@ -168,7 +168,7 @@ class PageApiLog extends GetView<ControllerApiLog> {
                                               ),
                                               child: Text(
                                                 'ERROR',
-                                                style: TextStyles.callout3
+                                                style: TextStyles.textApiLog3
                                                     .copyWith(
                                                   color: Colors.red.shade700,
                                                 ),

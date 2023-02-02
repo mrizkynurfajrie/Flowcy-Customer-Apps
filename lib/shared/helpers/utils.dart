@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'dart:developer';
 import 'dart:io';
+import 'package:dio/dio.dart';
 import 'package:flowcy_customer/framework/api1.dart';
 import 'package:get/get.dart';
 import 'package:path/path.dart' as path;
@@ -101,4 +102,19 @@ void handleNotificationRoute(String screen, int? id, {int? secondId}) {
   //     break;
   //   default:
   // }
+  
 }
+
+// extennsion
+extension DioErrorX on DioError {
+  bool get isNoConnectionError {
+    return type == DioErrorType.other && error is SocketException;
+  }
+}
+
+extension FigmaDimention on double {
+  double toFigmaHeight(double fontsize) {
+    return this / fontsize;
+  }
+}
+

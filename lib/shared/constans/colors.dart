@@ -144,4 +144,7 @@ class AppColor {
   static const Color transparentColor = Colors.transparent;
   static const Color whiteColor = Color(0xFFFFFFFF);
   static const Color blackColor = Color(0xFF000000);
+
+  //BGPGCOLOR
+  static const Color bgPageColor = Color(0xFFF5F5F5);
 }

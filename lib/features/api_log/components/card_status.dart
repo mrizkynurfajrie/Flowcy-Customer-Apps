@@ -36,7 +36,7 @@ class CardStatus extends StatelessWidget {
       ),
       child: Text(
         status,
-        style: TextStyles.callout3.copyWith(color: getTextColor(status)),
+        style: TextStyles.textApiLog3.copyWith(color: getTextColor(status)),
       ),
     );
   }

@@ -31,6 +31,8 @@ class InputPrimary extends StatefulWidget {
   final Color? inputColor;
   final TextStyle? hintStyles;
   final InputBorder? inputBorder;
+  final String? info;
+  final TextStyle? infoStyle;
 
   const InputPrimary({
     Key? key,
@@ -61,6 +63,8 @@ class InputPrimary extends StatefulWidget {
     this.inputColor,
     this.hintStyles,
     this.inputBorder,
+    this.info,
+    this.infoStyle,
   }) : super(key: key);
 
   @override
@@ -125,6 +129,18 @@ class _InputPrimaryState extends State<InputPrimary> {
             ),
           ),
         ),
+        widget.info != null
+            ? Container(
+                padding: EdgeInsets.only(bottom: Insets.xs),
+                child: Text(
+                  widget.info!,
+                  style: widget.infoStyle ??
+                      TextStyles.textSm.copyWith(
+                        color: AppColor.neutral.shade400,
+                      ),
+                ),
+              )
+            : const SizedBox(),
       ],
     );
   }
