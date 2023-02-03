@@ -536,6 +536,10 @@ class TextStyles {
       letterSpacing: .5);
   static TextStyle get button => inter.copyWith(
       fontWeight: FontWeight.bold, fontSize: FontSizes.s14, height: 1.71);
+  static TextStyle get titleSmBold => inter.copyWith(
+        fontSize: FontSizes.s18,
+        fontWeight: FontWeight.w600,
+      );
 
   // display
   static TextStyle get displayXs => inter.copyWith(

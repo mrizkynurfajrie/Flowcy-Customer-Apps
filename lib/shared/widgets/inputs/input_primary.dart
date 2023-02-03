@@ -111,8 +111,8 @@ class _InputPrimaryState extends State<InputPrimary> {
             textCapitalization: widget.textCapitalization,
             validator: widget.validate,
             style: TextStyles.inter.copyWith(
-              fontSize: FontSizes.s12,
-              color: AppColor.neutral,
+              fontSize: FontSizes.s16,
+              color: AppColor.neutral.shade500,
             ),
             decoration: inputDecoration(
               hintText: widget.hintText,

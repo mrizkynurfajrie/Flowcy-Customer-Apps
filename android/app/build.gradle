@@ -60,6 +60,28 @@ android {
             signingConfig signingConfigs.debug
         }
     }
+
+    flavorDimensions "flowcy"
+    productFlavors {
+        prod {
+            dimension "flowcy"
+            applicationIdSuffix ""
+            resValue "string", "app_name", "Flowcy Customer"
+            versionNameSuffix ""
+        }
+        staging {
+            dimension "flowcy"
+            applicationIdSuffix ".stg"
+            resValue "string", "app_name", "Staging Flowcy Customer"
+            versionNameSuffix ".stg"
+        }
+        dev {
+            dimension "flowcy"
+            applicationIdSuffix ".dev"
+            resValue "string", "app_name", "Dev Flowcy Mitra"
+            versionNameSuffix ".dev"
+        }
+    }
 }
 
 flutter {

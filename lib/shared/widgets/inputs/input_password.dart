@@ -79,7 +79,7 @@ class _InputPasswordState extends State<InputPassword> {
               validator: widget.validate ??
                   (value) {
                     if (!isValidPassword(password: value.toString())) {
-                      return '- Kata Sandi minimal 6 karakter\n'
+                      return '- Kata Sandi minimal 8 karakter\n'
                           // '- Diawali huruf kapital\n' +
                           '- Terdiri dari kombinasi huruf & angka';
                       // dan symbol (!@#\$%^&*(),.?":{}|<>])';
