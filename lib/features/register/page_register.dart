@@ -2,7 +2,6 @@ import 'package:flowcy_customer/features/register/controller_register.dart';
 import 'package:flowcy_customer/shared/constans/colors.dart';
 import 'package:flowcy_customer/shared/constans/styles.dart';
 import 'package:flowcy_customer/shared/widgets/buttons/button_primary.dart';
-import 'package:flowcy_customer/shared/widgets/inputs/input_primary.dart';
 import 'package:flowcy_customer/shared/widgets/pages/page_decoration_top.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -14,6 +13,7 @@ class PageRegister extends GetView<ControllerRegister> {
   @override
   Widget build(BuildContext context) {
     return PageDecorationTop(
+      resizeAvoidBottom: true,
       title: "",
       toolbarColor: AppColor.whiteColor,
       backgroundColor: AppColor.whiteColor,

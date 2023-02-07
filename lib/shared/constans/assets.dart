@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class AppIcons {
-  // static const history = 'assets/icons/history.svg';
+  //register page//
+  static const user = 'assets/icons/user.svg';
+  static const calendar = 'assets/icons/calendar.svg';
 
   static Widget iconApp(String asset, {Color? color, double? height}) {
     return SvgPicture.asset(

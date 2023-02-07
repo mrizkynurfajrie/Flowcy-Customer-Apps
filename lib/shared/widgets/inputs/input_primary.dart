@@ -83,9 +83,9 @@ class _InputPrimaryState extends State<InputPrimary> {
                 child: Text(
                   widget.label,
                   style: TextStyles.inter.copyWith(
-                    fontSize: FontSizes.s12,
-                    fontWeight: FontWeight.w400,
-                    color: AppColor.neutral,
+                    fontSize: FontSizes.s14,
+                    fontWeight: FontWeight.w600,
+                    color: AppColor.neutral.shade700,
                   ),
                 ),
               )
@@ -116,7 +116,11 @@ class _InputPrimaryState extends State<InputPrimary> {
             ),
             decoration: inputDecoration(
               hintText: widget.hintText,
-              hintStyles: widget.hintStyles,
+              hintStyles: widget.hintStyles ??
+                  TextStyles.inter.copyWith(
+                    fontSize: FontSizes.s16,
+                    color: AppColor.neutral.shade500,
+                  ),
               prefixIcon: widget.prefixIcon,
               suffixIcon: widget.suffixIcon,
               fontStyle: widget.hintFontStyle,

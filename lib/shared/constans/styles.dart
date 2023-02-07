@@ -67,7 +67,7 @@ InputDecoration inputDecoration({
     prefixIconConstraints:
         BoxConstraints(minHeight: Sizes.lg, minWidth: Sizes.lg),
     suffixIconConstraints:
-        BoxConstraints(minHeight: Sizes.lg, minWidth: Sizes.lg),
+        BoxConstraints(minHeight: Sizes.med, minWidth: Sizes.med),
     suffixIcon: suffixIcon,
     hintStyle: hintStyles ??
         TextStyles.inter.copyWith(
@@ -110,6 +110,7 @@ class IconSizes {
   static double get genderIcon => 10.w;
   static double get xs => 12.w;
   static double get sm => 16.w;
+  static double get arrowDown => 20.w;
   static double get add => 18.w;
   static double get med => 24.w;
   static double get medx => 28.w;
@@ -121,7 +122,7 @@ class IconSizes {
   static double get xxl => 60.w;
   static double get profPictSet => 64.w;
   static double get profPict => 40.w;
-  static double get xxxl => 90.w;
+  static double get xxxl => 96.w;
   static double get popup => 173.w;
 }
 
@@ -129,8 +130,8 @@ class Insets {
   static double get arrow => 17.w;
   static double offsetScale = 1;
   static double get xs => 4.w;
-  static double get sm => 8.w;
-  static double get med => 12.w;
+  static double get sm => 10.w;
+  static double get med => 14.w;
   static double get lg => 16.w;
   static double get xl => 20.w;
   static double get icMenu => 24.w;

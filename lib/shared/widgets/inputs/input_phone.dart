@@ -78,7 +78,10 @@ class _InputPhoneState extends State<InputPhone> {
                   child: Text(
                     widget.label,
                     style: TextStyles.inter.copyWith(
-                        fontSize: FontSizes.s10, fontWeight: FontWeight.w400),
+                      fontSize: FontSizes.s14,
+                      fontWeight: FontWeight.w600,
+                      color: AppColor.neutral.shade700,
+                    ),
                   ),
                 )
               : verticalSpace(0),
@@ -119,9 +122,13 @@ class _InputPhoneState extends State<InputPhone> {
           // ),
           Container(
             width: Get.width,
-            margin: EdgeInsets.zero,
-            padding: EdgeInsets.zero,
-            color: AppColor.transparentColor,
+            margin: widget.margin ?? EdgeInsets.zero,
+            padding: widget.padding ?? EdgeInsets.zero,
+            decoration: BoxDecoration(
+                border: Border.all(
+                  color: AppColor.neutral.shade300,
+                ),
+                borderRadius: const BorderRadius.all(Radius.circular(8))),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -158,20 +165,25 @@ class _InputPhoneState extends State<InputPhone> {
                     //       ),
                     //     ))
                     ? Container(
+                        padding: EdgeInsets.only(
+                          left: 14.w,
+                          right: 12.w,
+                          top: 10.h,
+                          bottom: 10.h,
+                        ),
                         decoration: BoxDecoration(
-                            border: Border(
-                                bottom: BorderSide(
-                                    color: AppColor.neutral.shade400,
-                                    width: 1))),
-                        padding: EdgeInsets.symmetric(
-                            horizontal: 10.w, vertical: 6.h),
-                        margin: EdgeInsets.only(right: 10.w),
-                        width: 60.w,
+                          border: Border(
+                            right: BorderSide(
+                              color: AppColor.neutral.shade300,
+                              width: 1,
+                            ),
+                          ),
+                        ),
                         child: Text(
                           '+62',
                           style: TextStyles.inter.copyWith(
-                            fontSize: FontSizes.s18,
-                            fontWeight: FontWeight.w400,
+                            fontSize: FontSizes.s16,
+                            color: AppColor.neutral.shade600,
                           ),
                           textAlign: TextAlign.center,
                         ),
@@ -192,14 +204,16 @@ class _InputPhoneState extends State<InputPhone> {
                     onSaved: widget.onSave,
                     keyboardType: TextInputType.phone,
                     controller: widget.controller,
-                    validator: (value) {
-                      if (!GetUtils.isPhoneNumber(value.toString())) {
-                        return 'Masukkan nomor ponsel dengan benar';
-                      }
-                      return null;
-                    },
+                    // validator: (value) {
+                    //   if (!GetUtils.isPhoneNumber(value.toString())) {
+                    //     return 'Masukkan nomor ponsel dengan benar';
+                    //   }
+                    //   return null;
+                    // },
                     style: TextStyles.inter.copyWith(
-                        fontSize: FontSizes.s18, fontWeight: FontWeight.w400),
+                      fontSize: FontSizes.s16,
+                      color: AppColor.neutral.shade500,
+                    ),
                     inputFormatters: [
                       LengthLimitingTextInputFormatter(14),
                       FilteringTextInputFormatter.allow(RegExp(r'[0-9]')),
@@ -208,14 +222,18 @@ class _InputPhoneState extends State<InputPhone> {
                     decoration: InputDecoration(
                       suffixIcon: widget.suffixIcon,
                       isDense: true,
-                      contentPadding:
-                          EdgeInsets.symmetric(horizontal: 5.w, vertical: 7.h),
-                      hintText: '812 345 6789',
+                      contentPadding: EdgeInsets.symmetric(
+                          horizontal: 12.w, vertical: 10.h),
+                      hintText: '8xxxxxxxxx',
                       hintStyle: TextStyles.inter.copyWith(
-                          fontSize: FontSizes.s14, fontStyle: FontStyle.italic),
-                      enabledBorder: UnderlineInputBorder(
+                        fontSize: FontSizes.s16,
+                        color: AppColor.neutral.shade500,
+                      ),
+                      enabledBorder: const OutlineInputBorder(
                         borderSide: BorderSide(
-                            color: AppColor.neutral.shade400, width: 1),
+                          color: AppColor.whiteColor,
+                          width: 1,
+                        ),
                       ),
                     ),
                   ),

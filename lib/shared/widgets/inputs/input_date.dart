@@ -30,6 +30,7 @@ class InputDate extends StatefulWidget {
   final TextStyle? hintStyles;
   final InputBorder? inputBorder;
   final FontStyle? hintFontStyle;
+  final EdgeInsets? suffixIconPadding;
 
   const InputDate({
     Key? key,
@@ -56,6 +57,7 @@ class InputDate extends StatefulWidget {
     this.hintStyles,
     this.inputBorder,
     this.hintFontStyle,
+    this.suffixIconPadding,
   }) : super(key: key);
 
   @override
@@ -104,9 +106,10 @@ class _InputDateState extends State<InputDate> {
                 child: Text(
                   widget.label,
                   style: TextStyles.inter.copyWith(
-                      fontSize: FontSizes.s12,
-                      color: AppColor.neutral,
-                      fontWeight: FontWeight.w400),
+                    fontSize: FontSizes.s14,
+                    fontWeight: FontWeight.w600,
+                    color: AppColor.neutral.shade700,
+                  ),
                 ),
               )
             : verticalSpace(0),
@@ -134,14 +137,21 @@ class _InputDateState extends State<InputDate> {
                   return null;
                 },
             style: TextStyles.inter.copyWith(
-              fontSize: FontSizes.s12,
-              color: AppColor.neutral,
+              fontSize: FontSizes.s16,
+              color: AppColor.neutral.shade500,
             ),
             decoration: inputDecoration(
               hintText: widget.hintText,
-              hintStyles: widget.hintStyles,
+              hintStyles: widget.hintStyles ??
+                  TextStyles.inter.copyWith(
+                    fontSize: FontSizes.s16,
+                    color: AppColor.neutral.shade500,
+                  ),
               prefixIcon: widget.prefixIcon,
-              suffixIcon: widget.suffixIcon,
+              suffixIcon: Padding(
+                padding: widget.suffixIconPadding ?? const EdgeInsets.all(12),
+                child: widget.suffixIcon,
+              ),
               fontStyle: widget.hintFontStyle,
               enabledBorder: widget.enabledBorder,
               focusedBorder: widget.focusedBorder,
