@@ -3,7 +3,7 @@ import 'package:flowcy_customer/shared/constans/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-class InputPrimary extends StatefulWidget {
+class InputPrimaryBig extends StatefulWidget {
   final String hintText;
   final String? Function(String?)? validate;
   final Function() onTap;
@@ -12,6 +12,7 @@ class InputPrimary extends StatefulWidget {
   final Widget? suffixIcon;
   final FontStyle? hintFontStyle;
   final String label;
+  final String? subLabel;
   final TextEditingController? controller;
   final TextInputType keyboardType;
   final List<TextInputFormatter>? inputFormatters;
@@ -34,7 +35,7 @@ class InputPrimary extends StatefulWidget {
   final String? info;
   final TextStyle? infoStyle;
 
-  const InputPrimary({
+  const InputPrimaryBig({
     Key? key,
     required this.hintText,
     this.validate,
@@ -44,6 +45,7 @@ class InputPrimary extends StatefulWidget {
     this.suffixIcon,
     this.hintFontStyle,
     this.label = '',
+    this.subLabel = '',
     this.controller,
     this.keyboardType = TextInputType.text,
     this.inputFormatters,
@@ -68,10 +70,10 @@ class InputPrimary extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _InputPrimaryState createState() => _InputPrimaryState();
+  _InputPrimaryBigState createState() => _InputPrimaryBigState();
 }
 
-class _InputPrimaryState extends State<InputPrimary> {
+class _InputPrimaryBigState extends State<InputPrimaryBig> {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -79,15 +81,29 @@ class _InputPrimaryState extends State<InputPrimary> {
       mainAxisSize: MainAxisSize.min,
       children: [
         widget.label != ''
-            ? SizedBox(
-                child: Text(
-                  widget.label,
-                  style: TextStyles.inter.copyWith(
-                    fontSize: FontSizes.s16,
-                    fontWeight: FontWeight.w500,
-                    color: AppColor.neutral.shade700,
+            ? Row(
+                children: [
+                  SizedBox(
+                    child: Text(
+                      widget.label,
+                      style: TextStyles.inter.copyWith(
+                        fontSize: FontSizes.s16,
+                        fontWeight: FontWeight.w500,
+                        color: AppColor.neutral.shade700,
+                      ),
+                    ),
                   ),
-                ),
+                  widget.subLabel != ''
+                      ? Text(
+                          widget.subLabel ?? 'Sub Label',
+                          style: TextStyles.inter.copyWith(
+                            fontSize: FontSizes.s16,
+                            color: AppColor.neutral.shade400,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        )
+                      : horizontalSpace(0),
+                ],
               )
             : verticalSpace(0),
         Container(

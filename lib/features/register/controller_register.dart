@@ -1,5 +1,7 @@
 import 'dart:async';
+import 'dart:developer';
 import 'dart:io';
+import 'package:flowcy_customer/features/register/pages/form_alamat.dart';
 import 'package:flowcy_customer/features/register/pages/form_daftar.dart';
 import 'package:flowcy_customer/features/register/pages/form_data_diri.dart';
 import 'package:flowcy_customer/features/register/pages/form_password.dart';
@@ -25,6 +27,7 @@ class ControllerRegister extends GetxController {
     const FormVerifikasi(),
     const FormPassword(),
     const FormDataDiri(),
+    const FormDataAlamat(),
   ];
   changePage(index) => currentPage.value = index;
 
@@ -50,7 +53,6 @@ class ControllerRegister extends GetxController {
   var txtPhone = TextEditingController();
   var gender = ''.obs;
   var isPhoneValid = true.obs;
-  
 
   genderSelect(context) {
     showModalBottomSheet(
@@ -152,6 +154,52 @@ class ControllerRegister extends GetxController {
   }
 
   //Data Alamat Controller//
+  var txtAddress = TextEditingController();
+  var txtCity = TextEditingController();
+  var txtSubDistrict = TextEditingController();
+  var txtAddressAs = TextEditingController();
+  var txtDescription = TextEditingController();
+  var addressAs = ''.obs;
+
+  pinAddressAs(context) {
+    showModalBottomSheet(
+      context: context,
+      builder: (BuildContext bc) {
+        return SafeArea(
+          child: SizedBox(
+            child: Wrap(
+              children: <Widget>[
+                ListTile(
+                  title: const Text('Rumah'),
+                  onTap: () {
+                    txtAddressAs.text = 'Rumah';
+                    addressAs.value = 'rumah';
+                    Navigator.of(context).pop();
+                  },
+                ),
+                ListTile(
+                  title: const Text('Kantor'),
+                  onTap: () {
+                    txtAddressAs.text = 'Kantor';
+                    addressAs.value = 'kantor';
+                    Navigator.of(context).pop();
+                  },
+                ),
+                ListTile(
+                  title: const Text('Tempat Umum'),
+                  onTap: () {
+                    txtAddressAs.text = 'Tempat Umum';
+                    addressAs.value = 'tempatumum';
+                    Navigator.of(context).pop();
+                  },
+                ),
+              ],
+            ),
+          ),
+        );
+      },
+    );
+  }
 
   @override
   void onInit() {

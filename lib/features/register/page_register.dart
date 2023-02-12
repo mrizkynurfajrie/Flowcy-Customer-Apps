@@ -146,7 +146,7 @@ class PageRegister extends GetView<ControllerRegister> {
                     ),
                     onPressed: () async {
                       var nextForm = controller.currentPage.value + 1;
-                      if (nextForm < 4) {
+                      if (nextForm < 5) {
                         if (controller.currentPage.value == 0) {
                           controller.changePage(nextForm);
                           controller.pageController.animateToPage(
@@ -170,6 +170,15 @@ class PageRegister extends GetView<ControllerRegister> {
                                 duration: Times.medium,
                                 curve: Curves.easeInOut,
                               );
+                            } else {
+                              if (controller.currentPage.value == 3) {
+                                controller.changePage(nextForm);
+                                controller.pageController.animateToPage(
+                                  nextForm,
+                                  duration: Times.medium,
+                                  curve: Curves.easeInOut,
+                                );
+                              }
                             }
                           }
                         }
