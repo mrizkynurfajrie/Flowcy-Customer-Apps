@@ -5,6 +5,7 @@ import 'package:flowcy_customer/features/initial/page_initial.dart';
 import 'package:flowcy_customer/features/register/binding_register.dart';
 import 'package:flowcy_customer/features/register/page_register.dart';
 import 'package:flowcy_customer/features/splash/page_splash.dart';
+import 'package:flowcy_customer/features/welcome/page_welcome.dart';
 import 'package:flowcy_customer/routes/app_routes.dart';
 import 'package:get/get.dart';
 
@@ -17,6 +18,10 @@ class AppPages {
     GetPage(
       name: Routes.splashScreen,
       page: () => const SplashScreen(),
+    ),
+    GetPage(
+      name: Routes.welcomePage,
+      page: () => const PageWelcome(),
     ),
     GetPage(
       name: Routes.apiLog,

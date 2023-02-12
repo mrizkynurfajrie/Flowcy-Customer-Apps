@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:developer';
 import 'dart:io';
+import 'package:flowcy_customer/features/register/api_register.dart';
 import 'package:flowcy_customer/features/register/pages/form_alamat.dart';
 import 'package:flowcy_customer/features/register/pages/form_daftar.dart';
 import 'package:flowcy_customer/features/register/pages/form_data_diri.dart';
@@ -16,6 +17,9 @@ import 'package:pin_code_fields/pin_code_fields.dart';
 import 'package:path_provider/path_provider.dart' as path_provider;
 
 class ControllerRegister extends GetxController {
+  final ApiRegister api;
+  ControllerRegister({required this.api});
+
   final formKey = GlobalKey<FormState>();
 
   //Parent Page Controller//

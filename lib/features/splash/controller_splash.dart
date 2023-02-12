@@ -17,7 +17,7 @@ class ControllerSplash extends GetxController {
 
   splashAnimation() async {
     await Future.delayed(const Duration(seconds: 1));
-    Get.offNamed(Routes.registerpage);
+    Get.offNamed(Routes.welcomePage);
   }
 
   // splashAnimation() async {
