@@ -6,4 +6,5 @@ abstract class Routes{
   static const registerpage = '/register_page';
   static const loginPage = '/login_page';
   static const forgotPasswordPage = '/forgot_password_page';
+  static const newPasswordSuccess = '/new_password_success';
 }

@@ -4,6 +4,7 @@ import 'package:flowcy_customer/features/initial/binding_initial.dart';
 import 'package:flowcy_customer/features/initial/page_initial.dart';
 import 'package:flowcy_customer/features/login/binding_login.dart';
 import 'package:flowcy_customer/features/login/forgot_password/page_forgot_password.dart';
+import 'package:flowcy_customer/features/login/forgot_password/pages/new_password_success.dart';
 import 'package:flowcy_customer/features/login/page_login.dart';
 import 'package:flowcy_customer/features/register/binding_register.dart';
 import 'package:flowcy_customer/features/register/page_register.dart';
@@ -45,6 +46,10 @@ class AppPages {
       name: Routes.forgotPasswordPage,
       page: () => const PageForgotPassword(),
       binding: BindingLogin(),
+    ),
+    GetPage(
+      name: Routes.newPasswordSuccess,
+      page: () => const NewPasswordSuccess(),
     ),
   ];
 }

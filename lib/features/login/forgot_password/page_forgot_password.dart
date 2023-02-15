@@ -1,5 +1,6 @@
 import 'package:flowcy_customer/features/login/api_login.dart';
 import 'package:flowcy_customer/features/login/controller_login.dart';
+import 'package:flowcy_customer/routes/app_routes.dart';
 import 'package:flowcy_customer/shared/constans/colors.dart';
 import 'package:flowcy_customer/shared/constans/styles.dart';
 import 'package:flowcy_customer/shared/widgets/buttons/button_primary.dart';
@@ -19,7 +20,7 @@ class PageForgotPassword extends GetView<ControllerLogin> {
       toolbarColor: AppColor.whiteColor,
       backgroundColor: AppColor.whiteColor,
       toolbarTitleColor: AppColor.neutral.shade700,
-      enableBack: true,
+      enableBack: controller.currentPage.value < 2 ? true : false,
       padding: EdgeInsets.zero,
       center: Obx(
         () => Padding(
@@ -102,7 +103,7 @@ class PageForgotPassword extends GetView<ControllerLogin> {
                     ),
                     onPressed: () async {
                       var nextForm = controller.currentPage.value + 1;
-                      if (nextForm < 5) {
+                      if (nextForm < 3) {
                         if (controller.currentPage.value == 0) {
                           controller.changePage(nextForm);
                           controller.pageController.animateToPage(
@@ -112,30 +113,7 @@ class PageForgotPassword extends GetView<ControllerLogin> {
                           );
                         } else {
                           if (controller.currentPage.value == 1) {
-                            controller.changePage(nextForm);
-                            controller.pageController.animateToPage(
-                              nextForm,
-                              duration: Times.medium,
-                              curve: Curves.easeInOut,
-                            );
-                          } else {
-                            if (controller.currentPage.value == 2) {
-                              controller.changePage(nextForm);
-                              controller.pageController.animateToPage(
-                                nextForm,
-                                duration: Times.medium,
-                                curve: Curves.easeInOut,
-                              );
-                            } else {
-                              if (controller.currentPage.value == 3) {
-                                controller.changePage(nextForm);
-                                controller.pageController.animateToPage(
-                                  nextForm,
-                                  duration: Times.medium,
-                                  curve: Curves.easeInOut,
-                                );
-                              }
-                            }
+                            Get.offAndToNamed(Routes.newPasswordSuccess);
                           }
                         }
                       }

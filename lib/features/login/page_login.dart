@@ -23,6 +23,7 @@ class PageLogin extends GetView<ControllerLogin> {
       backgroundColor: AppColor.whiteColor,
       toolbarTitleColor: AppColor.neutral.shade700,
       enableBack: true,
+      onBackPressed: () => Get.offAllNamed(Routes.welcomePage),
       padding: EdgeInsets.zero,
       center: Padding(
         padding: const EdgeInsets.only(left: 118),

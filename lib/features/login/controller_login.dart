@@ -1,6 +1,7 @@
 import 'package:flowcy_customer/features/login/api_login.dart';
 import 'package:flowcy_customer/features/login/forgot_password/pages/form_input_email.dart';
 import 'package:flowcy_customer/features/login/forgot_password/pages/form_input_new_password.dart';
+import 'package:flowcy_customer/features/login/forgot_password/pages/new_password_success.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
