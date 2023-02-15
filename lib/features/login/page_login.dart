@@ -1,4 +1,5 @@
 import 'package:flowcy_customer/features/login/controller_login.dart';
+import 'package:flowcy_customer/routes/app_routes.dart';
 import 'package:flowcy_customer/shared/constans/colors.dart';
 import 'package:flowcy_customer/shared/constans/styles.dart';
 import 'package:flowcy_customer/shared/widgets/buttons/button_primary.dart';
@@ -68,7 +69,9 @@ class PageLogin extends GetView<ControllerLogin> {
               ),
               verticalSpace(32.h),
               GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  Get.toNamed(Routes.forgotPasswordPage);
+                },
                 child: Text(
                   'Lupa kata sandi',
                   style: TextStyles.inter.copyWith(

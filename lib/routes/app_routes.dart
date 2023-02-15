@@ -5,4 +5,5 @@ abstract class Routes{
   static const apiLog = '/api_log_page';
   static const registerpage = '/register_page';
   static const loginPage = '/login_page';
+  static const forgotPasswordPage = '/forgot_password_page';
 }
