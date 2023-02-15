@@ -19,6 +19,14 @@ class InputPassword extends StatefulWidget {
   final double? boxWidth;
   final EdgeInsets? padding;
   final EdgeInsets? margin;
+  final FontStyle? hintFontStyle;
+  final InputBorder? enabledBorder;
+  final InputBorder? errorBorder;
+  final InputBorder? focusedBorder;
+  final EdgeInsets? contentPadding;
+  final Color? inputColor;
+  final TextStyle? hintStyles;
+  final InputBorder? inputBorder;
 
   const InputPassword({
     Key? key,
@@ -35,6 +43,14 @@ class InputPassword extends StatefulWidget {
     this.boxWidth,
     this.padding,
     this.margin,
+    this.hintFontStyle,
+    this.enabledBorder,
+    this.errorBorder,
+    this.focusedBorder,
+    this.contentPadding,
+    this.inputBorder,
+    this.inputColor,
+    this.hintStyles,
   }) : super(key: key);
 
   @override
@@ -88,35 +104,40 @@ class _InputPasswordState extends State<InputPassword> {
                   },
               style: TextStyles.inter.copyWith(
                   fontSize: FontSizes.s18, fontWeight: FontWeight.w400),
-              decoration: InputDecoration(
-                isDense: true,
-                contentPadding:
-                    EdgeInsets.symmetric(horizontal: 5.w, vertical: 5.h),
-                enabledBorder: UnderlineInputBorder(
-                  borderSide:
-                      BorderSide(color: AppColor.neutral.shade400, width: 1),
-                ),
+              decoration: inputDecoration(
                 hintText: widget.hintText,
-                hintStyle: TextStyles.inter.copyWith(
-                  fontSize: FontSizes.s12,
-                  color: AppColor.neutral.shade600,
-                ),
+                hintStyles: widget.hintStyles ??
+                    TextStyles.inter.copyWith(
+                      fontSize: FontSizes.s16,
+                      color: AppColor.neutral.shade500,
+                    ),
                 prefixIcon: widget.prefixIcon,
-                suffixIconConstraints:
-                    BoxConstraints(maxHeight: 15.h, maxWidth: 15.w),
                 suffixIcon: GestureDetector(
                   behavior: HitTestBehavior.translucent,
                   onTap: onTap,
-                  child: _obsecureText
-                      ? Icon(
-                          Icons.visibility_off,
-                          size: IconSizes.sm,
-                        )
-                      : Icon(
-                          Icons.visibility,
-                          size: IconSizes.sm,
-                        ),
+                  child: Padding(
+                    padding: EdgeInsets.symmetric(
+                      vertical: 12.h,
+                      horizontal: 12.w,
+                    ),
+                    child: _obsecureText
+                        ? Icon(
+                            Icons.visibility_off,
+                            size: IconSizes.sm,
+                          )
+                        : Icon(
+                            Icons.visibility,
+                            size: IconSizes.sm,
+                          ),
+                  ),
                 ),
+                fontStyle: widget.hintFontStyle,
+                enabledBorder: widget.enabledBorder,
+                focusedBorder: widget.focusedBorder,
+                errorBorder: widget.errorBorder,
+                border: widget.inputBorder,
+                contentPadding: widget.contentPadding,
+                color: widget.inputColor ?? AppColor.whiteColor,
               ),
             ),
           ),

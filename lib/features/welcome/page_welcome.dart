@@ -87,7 +87,10 @@ class PageWelcome extends GetView<ControllerWelcome> {
                         fontWeight: FontWeight.w600,
                         color: AppColor.neutral.shade700,
                       ),
-                      recognizer: TapGestureRecognizer()..onTap = () {},
+                      recognizer: TapGestureRecognizer()
+                        ..onTap = () {
+                          Get.toNamed(Routes.loginPage);
+                        },
                     ),
                   ],
                 ),

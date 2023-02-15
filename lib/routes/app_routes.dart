@@ -4,4 +4,5 @@ abstract class Routes{
   static const welcomePage = '/welcome_page';
   static const apiLog = '/api_log_page';
   static const registerpage = '/register_page';
+  static const loginPage = '/login_page';
 }

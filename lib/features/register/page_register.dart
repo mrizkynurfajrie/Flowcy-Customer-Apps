@@ -21,18 +21,31 @@ class PageRegister extends GetView<ControllerRegister> {
       enableBack: true,
       padding: EdgeInsets.zero,
       center: Obx(
-        () => Text(
-          controller.currentPage.value == 0
-              ? "Daftar"
-              : controller.currentPage.value == 1
-                  ? "Verifikasi Akun"
-                  : controller.currentPage.value == 2
-                      ? "Buat Kata Sandi"
-                      : controller.currentPage.value == 3
-                          ? "Data Diri"
-                          : "Data Alamat",
-          style: TextStyles.titleSmBold.copyWith(
-            color: AppColor.neutral.shade900,
+        () => Padding(
+          padding: EdgeInsets.only(
+            left: controller.currentPage.value == 0
+                ? 120
+                : controller.currentPage.value == 1
+                    ? 82
+                    : controller.currentPage.value == 2
+                        ? 78.5
+                        : controller.currentPage.value == 3
+                            ? 110
+                            : 94,
+          ),
+          child: Text(
+            controller.currentPage.value == 0
+                ? "Daftar"
+                : controller.currentPage.value == 1
+                    ? "Verifikasi Akun"
+                    : controller.currentPage.value == 2
+                        ? "Buat Kata Sandi"
+                        : controller.currentPage.value == 3
+                            ? "Data Diri"
+                            : "Data Alamat",
+            style: TextStyles.titleSmBold.copyWith(
+              color: AppColor.neutral.shade900,
+            ),
           ),
         ),
       ),

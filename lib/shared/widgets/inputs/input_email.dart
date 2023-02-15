@@ -28,6 +28,7 @@ class InputEmail extends StatefulWidget {
   final Color? inputColor;
   final TextStyle? hintStyles;
   final InputBorder? inputBorder;
+  final FontStyle? hintFontStyle;
 
   const InputEmail({
     Key? key,
@@ -53,6 +54,7 @@ class InputEmail extends StatefulWidget {
     this.inputColor,
     this.hintStyles,
     this.inputBorder,
+    this.hintFontStyle,
   }) : super(key: key);
 
   @override
@@ -102,12 +104,20 @@ class _InputEmailState extends State<InputEmail> {
                     widget.isValid(true);
                     return null;
                   },
-              style: TextStyles.body3,
+              style: TextStyles.inter.copyWith(
+                fontSize: FontSizes.s16,
+                color: AppColor.neutral.shade500,
+              ),
               decoration: inputDecoration(
                 hintText: widget.hintText,
-                hintStyles: widget.hintStyles,
+                hintStyles: widget.hintStyles ??
+                    TextStyles.inter.copyWith(
+                      fontSize: FontSizes.s16,
+                      color: AppColor.neutral.shade500,
+                    ),
                 prefixIcon: widget.prefixIcon,
                 suffixIcon: widget.suffixIcon,
+                fontStyle: widget.hintFontStyle,
                 enabledBorder: widget.enabledBorder,
                 focusedBorder: widget.focusedBorder,
                 errorBorder: widget.errorBorder,

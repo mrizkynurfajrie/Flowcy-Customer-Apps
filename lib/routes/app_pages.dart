@@ -2,6 +2,8 @@ import 'package:flowcy_customer/features/api_log/binding_api_log.dart';
 import 'package:flowcy_customer/features/api_log/page_api_log.dart';
 import 'package:flowcy_customer/features/initial/binding_initial.dart';
 import 'package:flowcy_customer/features/initial/page_initial.dart';
+import 'package:flowcy_customer/features/login/binding_login.dart';
+import 'package:flowcy_customer/features/login/page_login.dart';
 import 'package:flowcy_customer/features/register/binding_register.dart';
 import 'package:flowcy_customer/features/register/page_register.dart';
 import 'package:flowcy_customer/features/splash/page_splash.dart';
@@ -32,6 +34,11 @@ class AppPages {
       name: Routes.registerpage,
       page: () => const PageRegister(),
       binding: BindingRegister(),
+    ),
+    GetPage(
+      name: Routes.loginPage,
+      page: () => const PageLogin(),
+      binding: BindingLogin(),
     ),
   ];
 }
