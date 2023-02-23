@@ -1,3 +1,6 @@
+import 'package:flowcy_customer/features/activity/page_activity.dart';
+import 'package:flowcy_customer/features/notification/page_notification.dart';
+import 'package:flowcy_customer/features/profile/page_profile.dart';
 import 'package:flowcy_customer/home/page_home.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -10,6 +13,9 @@ class ControllerMain extends GetxController {
   var currentPage = 0.obs;
   final List<Widget> pages = [
     const PageHome(),
+    const PageActivity(),
+    const PageNotification(),
+    const PageProfile(),
   ];
 
   void changePage(index) => currentPage.value = index;
