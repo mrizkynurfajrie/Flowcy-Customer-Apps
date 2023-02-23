@@ -24,7 +24,8 @@ class PageLogin extends GetView<ControllerLogin> {
       toolbarTitleColor: AppColor.neutral.shade700,
       enableBack: true,
       onBackPressed: () => Get.offAllNamed(Routes.welcomePage),
-      padding: EdgeInsets.zero,
+      padding: EdgeInsets.zero, 
+       
       center: Padding(
         padding: const EdgeInsets.only(left: 118),
         child: Column(
@@ -93,7 +94,9 @@ class PageLogin extends GetView<ControllerLogin> {
                 color: AppColor.primaryColor,
                 cornerRadius: 8,
                 height: 40,
-                onPressed: () {},
+                onPressed: () {
+                  Get.toNamed(Routes.mainPage);
+                },
               ),
             ],
           ),

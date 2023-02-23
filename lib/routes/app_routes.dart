@@ -7,4 +7,6 @@ abstract class Routes{
   static const loginPage = '/login_page';
   static const forgotPasswordPage = '/forgot_password_page';
   static const newPasswordSuccess = '/new_password_success';
+  static const mainPage = '/main_page';
+  static const homePage = '/home_page';
 }

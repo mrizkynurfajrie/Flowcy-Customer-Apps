@@ -2,9 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class AppIcons {
+  //global vector or image//
+  static const defaultImage = 'assets/images/default_image.svg';
+
   //register page//
   static const user = 'assets/icons/user.svg';
   static const calendar = 'assets/icons/calendar.svg';
+
+  //Bottom Navigation Bar//
+  static const home = 'assets/icons/home.svg';
+  static const activity = 'assets/icons/activity.svg';
+  static const scan = 'assets/icons/scan.svg';
+  static const notification = 'assets/icons/notification.svg';
+  static const profile = 'assets/icons/profile.svg';
 
   static Widget iconApp(String asset, {Color? color, double? height}) {
     return SvgPicture.asset(

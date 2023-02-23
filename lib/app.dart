@@ -94,7 +94,7 @@ class _AppViewState extends State<AppView> with WidgetsBindingObserver {
                 AppConfig.isDevelopment() || AppConfig.isStaging()
                     ? const OverlayLogButton()
                     : const SizedBox(),
-                PageInfo(pageName: pageName),
+                // PageInfo(pageName: pageName),
               ]),
             ),
           );
