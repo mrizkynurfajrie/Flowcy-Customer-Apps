@@ -1,4 +1,3 @@
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flowcy_customer/home/controller_home.dart';
 import 'package:flowcy_customer/home/widgets/artikel_card.dart';
 import 'package:flowcy_customer/home/widgets/jual_card.dart';
