@@ -13,4 +13,9 @@ abstract class Routes{
   static const ubahdataprofilPage = '/ubah_data_profil_page';
   static const ubahkatasandi =  '/ubah_kata_sandi';
   static const ubahalamat = '/ubah_alamat'; 
+  static const bantuanPage = '/bantuan_page';
+  static const pagesKebijakan = '/pages_kebijakan_pelayanan';
+  static const pagesPrivasi = '/pages_privasi_dan_keamanan';
+  static const pagesFAQ = '/pages_faq';
+  static const pagesHubungi = '/pages_hubungi_customer_service';
 }

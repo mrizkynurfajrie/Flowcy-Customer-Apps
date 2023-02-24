@@ -117,9 +117,9 @@ class PageProfile extends GetView<ControllerProfile> {
                     //Tentang//
                     verticalSpace(24.h),
                     MenuProfileButton(
-                      ontap: () {},
+                      ontap: () => Get.toNamed(Routes.bantuanPage),
                       icon: AppIcons.tentang,
-                      title: 'Tentang',
+                      title: 'Bantuan',
                     ),
                     //Divder - 2//
                     verticalSpace(12.h),

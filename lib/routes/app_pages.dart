@@ -1,5 +1,12 @@
 import 'package:flowcy_customer/features/api_log/binding_api_log.dart';
 import 'package:flowcy_customer/features/api_log/page_api_log.dart';
+import 'package:flowcy_customer/features/bantuan/binding_bantuan.dart';
+import 'package:flowcy_customer/features/bantuan/page_bantuan.dart';
+import 'package:flowcy_customer/features/bantuan/pages/pages_faq.dart';
+import 'package:flowcy_customer/features/bantuan/pages/pages_hubungi.dart';
+import 'package:flowcy_customer/features/bantuan/pages/pages_kebijakan.dart';
+import 'package:flowcy_customer/features/bantuan/pages/pages_privasi.dart';
+import 'package:flowcy_customer/features/data_pribadi/binding_data_pribadi.dart';
 import 'package:flowcy_customer/features/data_pribadi/page_data_pribadi.dart';
 import 'package:flowcy_customer/features/data_pribadi/pages/ubah_alamat.dart';
 import 'package:flowcy_customer/features/data_pribadi/pages/ubah_data_profil.dart';
@@ -72,6 +79,7 @@ class AppPages {
     GetPage(
       name: Routes.datapribadiPage,
       page: () => const PageDataPribadi(),
+      binding: BindingDataPribadi(),
     ),
     GetPage(
       name: Routes.ubahdataprofilPage,
@@ -84,6 +92,27 @@ class AppPages {
     GetPage(
       name: Routes.ubahalamat,
       page: () => const UbahAlamat(),
+    ),
+    GetPage(
+      name: Routes.bantuanPage,
+      page: () => const PageBantuan(),
+      binding: BindingBantuan(),
+    ),
+    GetPage(
+      name: Routes.pagesKebijakan,
+      page: () => const PagesKebijakan(),
+    ),
+    GetPage(
+      name: Routes.pagesPrivasi,
+      page: () => const PagesPrivasi(),
+    ),
+    GetPage(
+      name: Routes.pagesFAQ,
+      page: () => const PagesFAQ(),
+    ),
+    GetPage(
+      name: Routes.pagesHubungi,
+      page: () => const PagesHubungi(),
     ),
   ];
 }
