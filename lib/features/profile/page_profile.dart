@@ -83,7 +83,7 @@ class PageProfile extends GetView<ControllerProfile> {
                   children: [
                     //Data Pribadi//
                     MenuProfileButton(
-                      ontap: () => Get.toNamed(Routes.datapribadiPage),
+                      ontap: () => Get.toNamed(Routes.profileDatapribadi),
                       icon: AppIcons.datapribadi,
                       title: 'Data Pribadi',
                     ),
@@ -114,12 +114,19 @@ class PageProfile extends GetView<ControllerProfile> {
                       icon: AppIcons.bagikan,
                       title: 'Bagikan Aplikasi',
                     ),
+                    //Bantuan//
+                    verticalSpace(24.h),
+                    MenuProfileButton(
+                      ontap: () => Get.toNamed(Routes.profileBantuan),
+                      icon: AppIcons.bantuan,
+                      title: 'Bantuan',
+                    ),
                     //Tentang//
                     verticalSpace(24.h),
                     MenuProfileButton(
-                      ontap: () => Get.toNamed(Routes.bantuanPage),
+                      ontap: () {},
                       icon: AppIcons.tentang,
-                      title: 'Bantuan',
+                      title: 'Tentang',
                     ),
                     //Divder - 2//
                     verticalSpace(12.h),

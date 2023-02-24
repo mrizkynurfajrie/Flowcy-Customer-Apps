@@ -9,11 +9,15 @@ abstract class Routes{
   static const newPasswordSuccess = '/new_password_success';
   static const mainPage = '/main_page';
   static const homePage = '/home_page';
-  static const datapribadiPage = '/data_pribadi_page';
+  static const profileDatapribadi = '/data_pribadi_page';
+  static const profileRiwayat = '/riwayat_page';
+  static const profileMenjadmitra = '/menjadi_mitra_page';
+  static const profileBagikan = '/bagikan_aplikasi_page';
+  static const profileBantuan = '/bantuan_page';
+  static const profileTentang = '/tentang_page';
   static const ubahdataprofilPage = '/ubah_data_profil_page';
   static const ubahkatasandi =  '/ubah_kata_sandi';
   static const ubahalamat = '/ubah_alamat'; 
-  static const bantuanPage = '/bantuan_page';
   static const pagesKebijakan = '/pages_kebijakan_pelayanan';
   static const pagesPrivasi = '/pages_privasi_dan_keamanan';
   static const pagesFAQ = '/pages_faq';

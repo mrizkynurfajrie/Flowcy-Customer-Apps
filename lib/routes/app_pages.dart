@@ -77,7 +77,7 @@ class AppPages {
       binding: BindingMain(),
     ),
     GetPage(
-      name: Routes.datapribadiPage,
+      name: Routes.profileDatapribadi,
       page: () => const PageDataPribadi(),
       binding: BindingDataPribadi(),
     ),
@@ -94,7 +94,7 @@ class AppPages {
       page: () => const UbahAlamat(),
     ),
     GetPage(
-      name: Routes.bantuanPage,
+      name: Routes.profileBantuan,
       page: () => const PageBantuan(),
       binding: BindingBantuan(),
     ),

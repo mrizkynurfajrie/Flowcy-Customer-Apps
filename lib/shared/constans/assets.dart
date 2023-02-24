@@ -21,6 +21,7 @@ class AppIcons {
   static const riwayat = 'assets/icons/profile_riwayat.svg';
   static const menjadimitra = 'assets/icons/profile_menjadimitrakami.svg';
   static const bagikan = 'assets/icons/profile_bagikan.svg';
+  static const bantuan = 'assets/icons/profile_bantuan.svg';
   static const tentang = 'assets/icons/profile_tentang.svg';
   static const keluar = 'assets/icons/profile_keluarakun.svg';
 
