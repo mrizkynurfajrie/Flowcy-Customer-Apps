@@ -140,6 +140,18 @@ class AppColor {
     900: Color.fromRGBO(136, 14, 79, 1),
   };
 
+  //SHIMMER
+  static const LinearGradient shimmerGradient = LinearGradient(
+    begin: Alignment.topLeft,
+    end: Alignment.bottomRight,
+    stops: [0.3, 0.5, 0.7],
+    colors: [
+      Color.fromARGB(255, 220, 220, 220),
+      Color.fromARGB(255, 169, 169, 169),
+      Color.fromARGB(255, 220, 220, 220),
+    ],
+  );
+
   //ACCENT
   static const Color transparentColor = Colors.transparent;
   static const Color whiteColor = Color(0xFFFFFFFF);

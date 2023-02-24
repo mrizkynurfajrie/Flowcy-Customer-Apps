@@ -121,7 +121,7 @@ class IconSizes {
   static double get xl => 48.w;
   static double get xxl => 60.w;
   static double get profPictSet => 64.w;
-  static double get profPict => 40.w;
+  static double get profPict => 48.w;
   static double get xxxl => 96.w;
   static double get popup => 173.w;
 }

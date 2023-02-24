@@ -16,6 +16,14 @@ class AppIcons {
   static const notification = 'assets/icons/notification.svg';
   static const profile = 'assets/icons/profile.svg';
 
+  //Profile Page//
+  static const datapribadi = 'assets/icons/profile_datapribadi.svg';
+  static const riwayat = 'assets/icons/profile_riwayat.svg';
+  static const menjadimitra = 'assets/icons/profile_menjadimitrakami.svg';
+  static const bagikan = 'assets/icons/profile_bagikan.svg';
+  static const tentang = 'assets/icons/profile_tentang.svg';
+  static const keluar = 'assets/icons/profile_keluarakun.svg';
+
   static Widget iconApp(String asset, {Color? color, double? height}) {
     return SvgPicture.asset(
       asset,
