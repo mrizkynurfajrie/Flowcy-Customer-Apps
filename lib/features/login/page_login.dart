@@ -5,7 +5,6 @@ import 'package:flowcy_customer/shared/constans/styles.dart';
 import 'package:flowcy_customer/shared/widgets/buttons/button_primary.dart';
 import 'package:flowcy_customer/shared/widgets/inputs/input_email.dart';
 import 'package:flowcy_customer/shared/widgets/inputs/input_password.dart';
-import 'package:flowcy_customer/shared/widgets/inputs/input_primary.dart';
 import 'package:flowcy_customer/shared/widgets/pages/page_decoration_top.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -25,7 +24,6 @@ class PageLogin extends GetView<ControllerLogin> {
       enableBack: true,
       onBackPressed: () => Get.offAllNamed(Routes.welcomePage),
       padding: EdgeInsets.zero, 
-       
       center: Padding(
         padding: const EdgeInsets.only(left: 118),
         child: Column(

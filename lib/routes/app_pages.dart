@@ -1,5 +1,9 @@
 import 'package:flowcy_customer/features/api_log/binding_api_log.dart';
 import 'package:flowcy_customer/features/api_log/page_api_log.dart';
+import 'package:flowcy_customer/features/data_pribadi/page_data_pribadi.dart';
+import 'package:flowcy_customer/features/data_pribadi/pages/ubah_alamat.dart';
+import 'package:flowcy_customer/features/data_pribadi/pages/ubah_data_profil.dart';
+import 'package:flowcy_customer/features/data_pribadi/pages/ubah_kata_sandi.dart';
 import 'package:flowcy_customer/features/initial/binding_initial.dart';
 import 'package:flowcy_customer/features/initial/page_initial.dart';
 import 'package:flowcy_customer/features/login/binding_login.dart';
@@ -64,6 +68,22 @@ class AppPages {
       name: Routes.mainPage,
       page: () => PageMain(),
       binding: BindingMain(),
+    ),
+    GetPage(
+      name: Routes.datapribadiPage,
+      page: () => const PageDataPribadi(),
+    ),
+    GetPage(
+      name: Routes.ubahdataprofilPage,
+      page: () => const UbahDataProfil(),
+    ),
+    GetPage(
+      name: Routes.ubahkatasandi,
+      page: () => const UbahKataSandi(),
+    ),
+    GetPage(
+      name: Routes.ubahalamat,
+      page: () => const UbahAlamat(),
     ),
   ];
 }

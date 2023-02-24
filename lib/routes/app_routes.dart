@@ -9,4 +9,8 @@ abstract class Routes{
   static const newPasswordSuccess = '/new_password_success';
   static const mainPage = '/main_page';
   static const homePage = '/home_page';
+  static const datapribadiPage = '/data_pribadi_page';
+  static const ubahdataprofilPage = '/ubah_data_profil_page';
+  static const ubahkatasandi =  '/ubah_kata_sandi';
+  static const ubahalamat = '/ubah_alamat'; 
 }

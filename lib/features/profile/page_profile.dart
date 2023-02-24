@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flowcy_customer/features/profile/controller_profile.dart';
+import 'package:flowcy_customer/routes/app_routes.dart';
 import 'package:flowcy_customer/shared/constans/assets.dart';
 import 'package:flowcy_customer/shared/constans/colors.dart';
 import 'package:flowcy_customer/shared/constans/styles.dart';
@@ -82,7 +83,7 @@ class PageProfile extends GetView<ControllerProfile> {
                   children: [
                     //Data Pribadi//
                     MenuProfileButton(
-                      ontap: () {},
+                      ontap: () => Get.toNamed(Routes.datapribadiPage),
                       icon: AppIcons.datapribadi,
                       title: 'Data Pribadi',
                     ),
